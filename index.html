@@ -8,8 +8,13 @@
 
 <style>
 @font-face {
-    font-family: 'Sharpie';
-    src: url('fonts/Sharpie-Variable.ttf') format('truetype-variations'), url('fonts/Sharpie-Variable.ttf') format('truetype');
+  font-family: 'Comico-Regular';
+  src: url('../fonts/Comico-Regular.woff2') format('woff2'),
+       url('../fonts/Comico-Regular.woff') format('woff'),
+       url('../fonts/Comico-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
 }
     body /* the body */
      {
@@ -23,7 +28,7 @@
 
     }
     p{
-        font-family: 'Sharpie', sans-serif;
+        font-family: 'Comico-Regular', sans-serif;
         margin: 10px 0;
 
     }
@@ -84,8 +89,13 @@
      <p class="aboutLink">
       <a href="tabs/AboutMe.html"> About Me </a>
       </p>
-    <p class="projectsLink">Projects</p>
-    <p class="contactLink">Contact</p>
+
+
+    <p class="projectsLink"><a href="tabs/projects.html"> Projects </a>
+    </p>
+    <p class="contactLink">
+        <a href="tabs/Contact.html"> Contact </a>
+    </p>
     
 </body>
 </html>
