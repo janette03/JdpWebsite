@@ -23,6 +23,7 @@
         flex-direction: column; 
         align-items: center; /* Centers horizontally */
         justify-content: center; /* Centers ver */
+        width: 100%;
         min-height: 100vh; 
         margin: 0;
 
@@ -32,6 +33,46 @@
         margin: 10px 0;
 
     }
+    .java-code-container {
+        font-family: 'Comico-Regular', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    margin-bottom: 40px;
+}
+.java-code-container h1, 
+.string, 
+.logo {
+    font-family: 'Comico-Regular', sans-serif !important;
+    font-size: clamp(24px, 5vw, 65px); /* Scales perfectly from phones to widescreen monitors */
+    font-weight: bold;
+    margin: 0;
+}
+.string {
+    
+    display: inline-flex;
+    flex-direction: column;
+    height: 1.2em; /* Bound tightly to one line height */
+    overflow: hidden; /* Hides the extra text until it rolls up */
+    vertical-align: bottom;
+    padding: 0 8px;
+}
+
+
+
+@keyframes move {
+    0%, 35% {
+        transform: translateY(0); /* Displays Jdp106 */
+    }
+    50%, 85% {
+        transform: translateY(-1.2em); /* Rolls up to display Jdp103 */
+    }
+    100% {
+        transform: translateY(0); /* Returns down smoothly */
+    }
+}
     .jdp106Text{
         font-family: 'Comico-Regular', sans-serif;
         font-size: 100px;
@@ -39,20 +80,21 @@
         font-weight: bold;
         
         padding-bottom: 3px;
+    }
+  
 
-        text-shadow: 5px 5px 0 #feb21a, 10px 10px 0 white;
-        animation: jdpShadow 4s ease-in-out infinite;
-        text-align: center;
-    }
-    @keyframes jdpShadow {
-        0%, 100%{
-            text-shadow: 5px 5px #feb21a, 10px 10px 0 white;
-        }
-        50%{
-            text-shadow: -5px -5px 0 #feb21a, -10px -10px 0 white;
-        }
-        
-    }
+
+
+  @keyframes move {
+  0%,20% {
+    transform: translatey(0);}
+  40%,60% {
+    transform: translatey(-1.2em);
+  }
+  80%,75% {
+    transform: translatey(0);
+  }
+}  
     
     
     
@@ -151,8 +193,18 @@ a:link, a:visited {
         </a>
     </div>
 
-    <div class ="logo-container">
-        <h1 class="jdp106Text"> Jdp106<h1>
+
+
+    
+   <div class="java-code-container">
+        <h1><span style="color: #134686;">System</span>.<span style="color:#ed3f27;">out</span>.<span style="color:#feb21a;">println</span>("</h1>
+        
+        <div class="string">
+            <span class="logo" style="color: #000;">Jdp106</span>
+            <span class="logo" style="color: #000;">Jdp103</span>
+        </div>
+        
+        <h1>");</h1>
     </div>
     
 
