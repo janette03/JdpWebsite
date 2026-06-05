@@ -46,19 +46,14 @@
     
 }
 .JdpText{
-    display: inline-block;
-    animation: rollIn .6s ease-out both;
+     letter-spacing: 0px;
+        transition: letter-spacing 0.4s ease-out;
 }
-@keyframes rollIn {
-    0%{
-        transform: translateX(-800px) rotate(-540deg);
-        opacity: 0;
+ .JdpText:hover{
+        letter-spacing: 5px;
     }
-    100%{
-        transform: translateX(0) rotate(0deg);
-        opacity: 1;
-    }
-    
+     .JdpText :hover {
+    color: #feb21a; 
 }
 
 
