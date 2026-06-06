@@ -60,6 +60,7 @@
 
     
     .aboutLink a{
+        font-family: 'Comico-Regular', sans-serif;
         font-size: 30px;
         font-weight: normal;
         text-align: left;
@@ -70,12 +71,36 @@
         transition: letter-spacing 0.4s ease-out;
     }
     .aboutLink a:hover{
-        letter-spacing: 3px;
+        letter-spacing: 2px;
     }
     .aboutLink a:hover {
     color: #feb21a; 
 }
+.linkStar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    width: auto;
+}
+.star{
+    width: 30px;
+    aspect-ratio: 1;
+    background: #000;
+    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
+    display: inline-block;
+    opacity: 0;
+    transition: opacity .3s ease-in-out, background-color .3s ease;
+}
+.linkStar:hover .star{
+    opacity: 1;
+    background-color: #feb21a;
+}
+
     .projectsLink a {
+        font-family: 'Comico-Regular', sans-serif;
         font-size: 30px;
         font-weight: normal;
         text-align: center;
@@ -87,12 +112,31 @@
         transition: letter-spacing 0.4s ease-out;
 
     }
-    .projectsLink a:hover{
-        letter-spacing: 3px;
-    }
-    .projectsLink a:hover {
+        .projectsLink a:hover {
     color: #134686; 
 }
+.projectsLink a:hover{
+        letter-spacing: 3px;
+    }
+
+    .LinkRhombus{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.rhombus {
+  height: 30px; /* adjust to control the size  */
+  aspect-ratio: 1;
+  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
+  background: #134686;
+}
+
+
     .contactLink a{
         font-size: 30px;
         font-weight: normal;
@@ -159,13 +203,17 @@ a:link, a:visited {
 </div>
     
 
-     <p class="aboutLink">
+     <div class="aboutLink linkStar">
+        <div class="star"></div>
       <a href="tabs/AboutMe.html"> About Me </a>
-      </p>
+     </div>
 
 
-    <p class="projectsLink"><a href="tabs/projects.html"> Projects </a>
-    </p>
+    <div class="projectsLink Linkstarburst">
+        <div class="rhombus"></div>
+        <a href="tabs/projects.html"> Projects </a>
+    </div>
+
     <p class="contactLink">
         <a href="tabs/Contact.html"> Contact </a>
     </p>
