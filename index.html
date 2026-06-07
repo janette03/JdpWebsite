@@ -1,227 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jdp</title>
-</head>
+  </head>
 
-<style>
-   @font-face {
-  font-family: 'Comico-Regular';
-  src: url('fonts/Comico-Regular.woff2') format('woff2'),
-       url('fonts/Comico-Regular.woff') format('woff'),
-       url('fonts/Comico-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-    body /* the body */
-     {
-        background-color: #fdf4e3; /*  background */
-        display: flex; 
-        flex-direction: column; 
-        align-items: center; /* Centers horizontally */
-        justify-content: center; /* Centers ver */
-        width: 100%;
-        min-height: 100vh; 
-        margin: 0;
-
+  <style>
+    @font-face {
+      font-family: "Comico-Regular";
+      src:
+        url("fonts/Comico-Regular.woff2") format("woff2"),
+        url("fonts/Comico-Regular.woff") format("woff"),
+        url("fonts/Comico-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-display: swap;
+      font-style: normal;
     }
-    p{
-        font-family: 'Comico-Regular', sans-serif;
-        margin: 10px 0;
-
+    body /* the body */ {
+      background-color: #fdf4e3; /*  background */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers horizontally */
+      justify-content: center; /* Centers ver */
+      width: 100%;
+      min-height: 100vh;
+      margin: 0;
     }
- 
-
-.logo {
-    font-family: 'Comico-Regular', sans-serif !important;
-    font-size: 80px;
-    font-weight: bold;
-    margin: 0;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    
-}
-.JdpText{
-     letter-spacing: 0px;
-        transition: letter-spacing 0.4s ease-out;
-}
- .JdpText:hover{
-        letter-spacing: 5px;
+    p {
+      font-family: "Comico-Regular", sans-serif;
+      margin: 10px 0;
     }
-     .JdpText :hover {
-    color: #feb21a; 
-}
 
-
-
-    
-    .aboutLink a{
-        font-family: 'Comico-Regular', sans-serif;
-        font-size: 30px;
-        font-weight: normal;
-        text-align: left;
-        text-decoration: none; 
-        color: black;
-
-        letter-spacing: 0px;
-        transition: letter-spacing 0.4s ease-out;
+    .logo {
+      font-family: "Comico-Regular", sans-serif !important;
+      font-size: 80px;
+      font-weight: bold;
+      margin: 0;
+      padding: 5px;
+      display: flex;
+      justify-content: center;
     }
-    .aboutLink a:hover{
-        letter-spacing: 2px;
+    .JdpText {
+      letter-spacing: 0px;
+      transition: letter-spacing 0.4s ease-out;
+    }
+    .JdpText:hover {
+      letter-spacing: 5px;
+    }
+    .JdpText :hover {
+      color: #feb21a;
+    }
+    .aboutLink a {
+      font-family: "Comico-Regular", sans-serif;
+      font-size: 30px;
+      font-weight: normal;
+      text-align: left;
+      text-decoration: none;
+      color: black;
+
+      letter-spacing: 0px;
+      transition: letter-spacing 0.4s ease-out;
     }
     .aboutLink a:hover {
-    color: #feb21a; 
-}
-.linkStar{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    cursor: pointer;
-    width: auto;
-}
-.star{
-    width: 30px;
-    aspect-ratio: 1;
-    background: #000;
-    clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
-    display: inline-block;
-    opacity: 0;
-    transition: opacity .3s ease-in-out, background-color .3s ease;
-}
-.linkStar:hover .star{
-    opacity: 1;
-    background-color: #feb21a;
-}
+      letter-spacing: 2px;
+    }
+    .aboutLink a:hover {
+      color: #feb21a;
+    }
+    .linkStar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      width: auto;
+    }
+    .star {
+      width: 30px;
+      aspect-ratio: 1;
+      background: #000;
+      clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
+      display: inline-block;
+      opacity: 0;
+      transition:
+        opacity 0.3s ease-in-out,
+        background-color 0.3s ease;
+    }
+    .linkStar:hover .star {
+      opacity: 1;
+      background-color: #feb21a;
+    }
 
     .projectsLink a {
-        font-family: 'Comico-Regular', sans-serif;
-        font-size: 30px;
-        font-weight: normal;
-        text-align: center;
-        text-decoration: none; 
-        color: black;
-        transition: color 0.3s ease; 
+      font-family: "Comico-Regular", sans-serif;
+      font-size: 30px;
+      font-weight: normal;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
 
-        letter-spacing: 0px;
-        transition: letter-spacing 0.4s ease-out;
-
+      letter-spacing: 0px;
+      transition: letter-spacing 0.4s ease-out;
     }
-        .projectsLink a:hover {
-    color: #134686; 
-}
-.projectsLink a:hover{
-        letter-spacing: 3px;
+    .projectsLink a:hover {
+      color: #134686;
+      letter-spacing: 3px;
+    }
+    .linkRhombus {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      width: 100%;
     }
 
-    .LinkRhombus{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.rhombus {
-  height: 30px; /* adjust to control the size  */
-  aspect-ratio: 1;
-  clip-path: polygon(50% 0,100% 50%,50% 100%,0 50%);
-  background: #134686;
-}
-
-
-    .contactLink a{
-        font-size: 30px;
-        font-weight: normal;
-        text-align: right;
-        text-decoration: none; 
-        color: black;
-        transition: color 0.3s ease; 
-
-        letter-spacing: 0px;
-        transition: letter-spacing 0.4s ease-out;
+    .rhombus {
+      height: 25px;
+      aspect-ratio: 1;
+      clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+      background: #fdf4e3;
+      display: inline-block;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
     }
-    .contactLink a:hover{
-        letter-spacing: 3px;
+    .linkRhombus:hover .rhombus {
+      opacity: 1;
+      background-color: #134686;
+    }
+
+    .contactLink a {
+      font-family: "Comico-Regular", sans-serif;
+      font-size: 30px;
+      font-weight: normal;
+     
+      text-decoration: none;
+      color: black;
+      
+
+      letter-spacing: 0px;
+      transition: letter-spacing 0.4s ease-out, color .3s ease;
     }
     .contactLink a:hover {
-    color: #ed3f27; 
-}
-   .logo-container{
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: flex;
-    gap: 15px;
-   }
-    .musicEmo a{
-    font-size: 30px;
-    text-decoration: none; 
-        color: black;
-        transition: color 0.3s ease; 
-        letter-spacing: 0px;
-        transition: letter-spacing 0.4s ease-out;
+      letter-spacing: 3px;
+      color: #ed3f27;
     }
-    .musicEmo a:hover{
+    .linkSparkle:hover a{
         letter-spacing: 3px;
+        color: #ed3f27;
     }
-   .musicEmo a:hover {
-    color: green; 
+    .linkSparkle {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+    .sparkle {
+      height: 20px;
+      width: 20px;
+      display: inline-block;
+      background: #ed3f27;
+      mask: radial-gradient(circle,#ed3f27 71%, transparent #ed3f27 72%);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
+    }
+    .linkSparkle:hover .sparkle {
+      opacity: 1;
+      background-color: #ed3f27;
+    }
+
+    .logo-container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: flex;
+      gap: 15px;
+    }
+    .musicEmo a {
+      font-size: 30px;
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+      letter-spacing: 0px;
+      transition: letter-spacing 0.4s ease-out;
+    }
+    .musicEmo a:hover {
+      letter-spacing: 3px;
+      color: green;
+    }
+.cloud {
+    height: 20px; /* control the size */
+    aspect-ratio: 1.8;
+    --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
+    mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
+    background: green;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
 }
-   img{
-    width: 40px;
-    height: auto;
+ .linkCloud:hover a{
+        letter-spacing: 3px;
+        color: green;
+    }
+ .linkCloud {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      cursor: pointer;
+      width: 100%;
+    }
+ .linkCloud:hover .cloud {
+      opacity: 1;
+      background-color: green;
+    }
    
-   }
 
-  
-   /* Sets both unvisited and visited links to the same color */
-a:link, a:visited {
-    color: #000; /* Replace with your preferred color */
-}
+    img {
+      width: 40px;
+      height: auto;
+    }
 
-</style>
-<body>
+    /* Sets both unvisited and visited links to the same color */
+    a:link,
+    a:visited {
+      color: #000; /* Replace with your preferred color */
+    }
+  </style>
+  <body>
     <div class="logo-container">
-        <a href="https://github.com/janette03" target="_blank">
-        <img src="logos/github.png" alt="github logo">
-        </a>
-        <a href="https://open.spotify.com/user/janettecx?si=f64318dc1fb24d2a" target="_blank">
-            <img src="logos/spotifylogo.png" alt="spoify logo">
-        </a>
+      <a href="https://github.com/janette03" target="_blank">
+        <img src="logos/github.png" alt="github logo" />
+      </a>
+      <a
+        href="https://open.spotify.com/user/janettecx?si=f64318dc1fb24d2a"
+        target="_blank"
+      >
+        <img src="logos/spotifylogo.png" alt="spoify logo" />
+      </a>
     </div>
 
+    <div class="logo"><p class="JdpText">Jdp106</p></div>
 
-<div class="logo"> <p class="JdpText">Jdp106</p> 
-</div>
-    
-
-     <div class="aboutLink linkStar">
-        <div class="star"></div>
+    <div class="aboutLink linkStar">
+      <div class="star"></div>
       <a href="tabs/AboutMe.html"> About Me </a>
-     </div>
-
-
-    <div class="projectsLink Linkstarburst">
-        <div class="rhombus"></div>
-        <a href="tabs/projects.html"> Projects </a>
     </div>
 
-    <p class="contactLink">
-        <a href="tabs/Contact.html"> Contact </a>
-    </p>
+    <div class="projectsLink linkRhombus">
+      <div class="rhombus"></div>
+      <a href="tabs/projects.html"> Projects </a>
+    </div>
 
-    <p class="musicEmo">
-      <a href="tabs/music.html">  ♫꒰･‿･๑꒱</a>
-      </p>
+    <div class="contactLink linkSparkle">
+        <div class="sparkle"></div>
+      <a href="tabs/Contact.html"> Contact </a>
+    </div>
 
-    
-</body>
+    <div class="musicEmo linkCloud">
+        <div class="cloud"></div>
+      <a href="tabs/music.html"> ♫꒰･‿･๑꒱</a>
+    </div>
+  </body>
 </html>
