@@ -47,27 +47,64 @@
     }
     .JdpText:hover {
       letter-spacing: 5px;
-    }
-    .JdpText :hover {
       color: #feb21a;
     }
+    .board{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 2; /*background layer*/
+      overflow: hidden; 
+    }
+        .sticky-note {
+            
+            width: 190px;
+            height: 170px;
+            padding: 20px;
+            position: absolute;
+            box-shadow: 4px 10px 22px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+           
+        }
+        .sticky-note a{
+          font-size: 24px;
+          text-decoration: none;
+          transition: letter-spacing .4s ease-out, color .3s ease;
+        }
+        .tape {
+            position: absolute;
+            width: 85px;
+            height: 30px;
+            background: rgba(255,255,255,0.45);
+            top: -13px;
+            left: 50%;
+            transform: translateX(-50%) rotate(1deg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
     .aboutLink a {
       font-family: "Comico-Regular", sans-serif;
       font-size: 30px;
       font-weight: normal;
-      text-align: left;
+      text-align: center;
       text-decoration: none;
       color: black;
+      
 
       letter-spacing: 0px;
       transition: letter-spacing 0.4s ease-out;
     }
     .aboutLink a:hover {
       letter-spacing: 2px;
+      color: #fdf4e3;
     }
-    .aboutLink a:hover {
-      color: #feb21a;
-    }
+   
     .linkStar {
       display: flex;
       flex-direction: row;
@@ -80,6 +117,7 @@
     .star {
       width: 30px;
       aspect-ratio: 1;
+      text-align: center;
       background: #000;
       clip-path: polygon(50% 0, 79% 90%, 2% 35%, 98% 35%, 21% 90%);
       display: inline-block;
@@ -90,9 +128,18 @@
     }
     .linkStar:hover .star {
       opacity: 1;
-      background-color: #feb21a;
+      background-color: #fdf4e3;
     }
-
+    
+ 
+        .note-about{
+          background: #feb21a;
+          top: 15%;
+          left: 8%;
+          transform: rotate(-5deg);
+        }
+ 
+  
     .projectsLink a {
       font-family: "Comico-Regular", sans-serif;
       font-size: 30px;
@@ -106,7 +153,7 @@
       transition: letter-spacing 0.4s ease-out;
     }
     .projectsLink a:hover {
-      color: #134686;
+      color: #fdf4e3;
       letter-spacing: 3px;
     }
     .linkRhombus {
@@ -130,8 +177,35 @@
     }
     .linkRhombus:hover .rhombus {
       opacity: 1;
-      background-color: #134686;
+      background-color: #fdf4e3;
     }
+    .note-project{
+      background-color: #134686;
+      bottom: 15%;
+      right: 10%;
+      transform: rotate(4deg);
+    }
+  
+      .sticky-note {
+            width: 190px;
+            height: 170px;
+            padding: 20px;
+            position: absolute;
+            box-shadow: 4px 10px 22px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+           
+        }
+        .sticky-note a{
+
+
+          font-size: 24px;
+          text-decoration: none;
+          transition: letter-spacing .4s ease-out color .3s ease;
+        }
 
     .contactLink a {
       font-family: "Comico-Regular", sans-serif;
@@ -147,11 +221,11 @@
     }
     .contactLink a:hover {
       letter-spacing: 3px;
-      color: #ed3f27;
+      color: #fdf4e3;
     }
     .linkSparkle:hover a{
         letter-spacing: 3px;
-        color: #ed3f27;
+        color: #fdf4e3;
     }
     .linkSparkle {
       display: flex;
@@ -166,16 +240,45 @@
       height: 20px;
       width: 20px;
       display: inline-block;
-      background: #ed3f27;
-      mask: radial-gradient(circle,#ed3f27 71%, transparent #ed3f27 72%);
+      background: #fdf4e3;
+      mask: radial-gradient(circle,#fdf4e3 71%, transparent #fdf4e3 72%);
       opacity: 0;
       transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
     }
     .linkSparkle:hover .sparkle {
       opacity: 1;
-      background-color: #ed3f27;
+      background-color: #fdf4e3;
     }
+    .note-contact{
+      background-color: #ed3f27;
+      bottom: 25%;
+      left: 12%;
+      transform: rotate(-3deg);
+    }
+    .note-contact a{
+      color: #fdf4e3;
+    }
+      .sticky-note {
+  
+            width: 190px;
+            height: 170px;
+            padding: 20px;
+            position: absolute;
+            box-shadow: 4px 10px 22px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+           
+        }
+        .sticky-note a{
 
+          font-size: 24px;
+          text-decoration: none;
+          transition: letter-spacing .4s ease-out color .3s ease;
+        }
+   
     .logo-container {
       position: absolute;
       top: 20px;
@@ -193,20 +296,20 @@
     }
     .musicEmo a:hover {
       letter-spacing: 3px;
-      color: green;
+      color: #fdf4e3;
     }
 .cloud {
     height: 20px; /* control the size */
     aspect-ratio: 1.8;
     --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
     mask: var(--g) 100% 100%/30% 60%,var(--g) 70% 0/50% 100%,var(--g) 0 100%/36% 68%,var(--g) 27% 18%/26% 40%,linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
-    background: green;
+    background: #fdf4e3;
     opacity: 0;
     transition: opacity 0.3s ease-in-out, background-color 0.3s ease;
 }
  .linkCloud:hover a{
         letter-spacing: 3px;
-        color: green;
+        color: #fdf4e3;
     }
  .linkCloud {
       display: flex;
@@ -219,8 +322,40 @@
     }
  .linkCloud:hover .cloud {
       opacity: 1;
-      background-color: green;
+      background-color: #fdf4e3;
     }
+    .note-emo{
+      background-color: green;
+      bottom: 8px;
+      left: 14%;
+      transform: rotate(6deg);
+    }
+    .note-emo a{
+      color: #000;
+      font-size: 20px;
+      letter-spacing: 0px;
+    }
+      .sticky-note {
+            
+            width: 190px;
+            height: 170px;
+            padding: 20px;
+            position: absolute;
+            box-shadow: 4px 10px 22px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+           
+        }
+        .sticky-note a{
+
+          font-size: 24px;
+          text-decoration: none;
+          transition: letter-spacing .4s ease-out color .3s ease;
+        }
+    
    
 
     img {
@@ -249,24 +384,34 @@
 
     <div class="logo"><p class="JdpText">Jdp106</p></div>
 
-    <div class="aboutLink linkStar">
+
+    <div class="board">
+
+      <div class="aboutLink linkStar sticky-note note-about">
+        <div class="tape"></div>
       <div class="star"></div>
       <a href="tabs/AboutMe.html"> About Me </a>
-    </div>
+      </div>
+    
 
-    <div class="projectsLink linkRhombus">
+    <div class="projectsLink linkRhombus sticky-note note-project">
+      <div class="tape"></div>
       <div class="rhombus"></div>
       <a href="tabs/projects.html"> Projects </a>
     </div>
 
-    <div class="contactLink linkSparkle">
+    <div class="contactLink linkSparkle sticky-note note-contact">
+      <div class="tape"></div>
         <div class="sparkle"></div>
       <a href="tabs/Contact.html"> Contact </a>
     </div>
 
-    <div class="musicEmo linkCloud">
+    <div class="musicEmo linkCloud sticky-note note-emo">
+      <div class="tape"></div>
         <div class="cloud"></div>
       <a href="tabs/music.html"> ♫꒰･‿･๑꒱</a>
+    </div>
+
     </div>
   </body>
 </html>
